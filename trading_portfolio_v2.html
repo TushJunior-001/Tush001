@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══ SEO META TAGS — critical for Google ranking ═══ -->
+<title>Brian Nzomo | Professional Forex & Futures Trader | Nairobi, Kenya</title>
+<meta name="description" content="Brian Nzomo is a professional independent trader based in Nairobi, Kenya, specialising in macro-driven multi-asset trading across Forex, Commodities, and CME Futures. Funded by FTMO, Topstep, and leading prop firms.">
+<meta name="keywords" content="Brian Nzomo, professional trader Kenya, forex trader Nairobi, prop trader Africa, funded trader, FTMO Kenya, futures trader, macro trader, independent trader Kenya">
+<meta name="author" content="Brian Nzomo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://briannzomo.com">
+
+<!-- Open Graph (WhatsApp, LinkedIn, Twitter previews) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://briannzomo.com">
+<meta property="og:title" content="Brian Nzomo — Professional Trader | Nairobi, Kenya">
+<meta property="og:description" content="Multi-asset macro-driven trader. Funded across FTMO and CME Futures prop firms. Specialising in Forex, Gold, Oil, and Indices.">
+<meta property="og:image" content="https://briannzomo.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Brian Nzomo — Professional Trader">
+<meta name="twitter:description" content="Independent professional trader. Forex, Commodities, CME Futures. Based in Nairobi, Kenya.">
+
+<!-- ═══ STRUCTURED DATA — makes Google show rich snippets ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Brian Nzomo",
+  "jobTitle": "Professional Trader",
+  "description": "Independent professional trader specialising in macro-driven multi-asset trading across Forex, Commodities, and CME Futures markets.",
+  "url": "https://briannzomo.com",
+  "email": "nzomobrian001@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Nairobi",
+    "addressCountry": "Kenya"
+  },
+  "knowsAbout": ["Forex Trading", "CME Futures", "Macro Analysis", "Gold Trading", "Oil Trading", "Prop Trading"],
+  "sameAs": [
+    "https://t.me/TushJunior"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --gold: #C9A96E;
+  --gold-light: #E8D5A3;
+  --gold-dim: #8B6F3E;
+  --bg: #080C14;
+  --bg2: #0D1220;
+  --bg3: #111827;
+  --surface: #161D2E;
+  --border: rgba(201,169,110,0.15);
+  --border-bright: rgba(201,169,110,0.4);
+  --text: #E8E4DC;
+  --muted: #7A8094;
+  --green: #4ADE80;
+  --red: #F87171;
+  --mono: 'JetBrains Mono', monospace;
+  --serif: 'Cormorant Garamond', serif;
+  --sans: 'DM Sans', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 15px; line-height: 1.7; overflow-x: hidden; }
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* TICKER */
+.ticker-bar { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 8px 0; overflow: hidden; position: fixed; top: 0; width: 100%; z-index: 100; }
+.ticker-inner { display: flex; gap: 48px; animation: ticker 40s linear infinite; white-space: nowrap; }
+.ticker-item { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.05em; flex-shrink: 0; }
+.ticker-item .up { color: var(--green); }
+.ticker-item .down { color: var(--red); }
+.ticker-item strong { color: var(--text); margin-right: 6px; }
+@keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* NAV */
+nav { position: fixed; top: 37px; width: 100%; z-index: 99; padding: 18px 48px; display: flex; align-items: center; justify-content: space-between; background: rgba(8,12,20,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); transition: background 0.3s; }
+.nav-logo { font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--gold); letter-spacing: 0.02em; text-decoration: none; }
+.nav-logo span { font-style: italic; font-weight: 300; }
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--gold); }
+.nav-cta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); border: 1px solid var(--border-bright); padding: 9px 20px; text-decoration: none; transition: all 0.25s; }
+.nav-cta:hover { background: var(--gold); color: var(--bg); }
+
+/* HERO */
+.hero { min-height: 100vh; display: flex; align-items: center; padding: 160px 48px 80px; position: relative; }
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; max-width: 1280px; width: 100%; margin: 0 auto; align-items: center; }
+.hero-eyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
+.hero-eyebrow::before { content: ''; display: block; width: 40px; height: 1px; background: var(--gold); }
+.hero h1 { font-family: var(--serif); font-size: clamp(52px, 6vw, 88px); font-weight: 300; line-height: 1.05; color: var(--text); margin-bottom: 8px; }
+.hero h1 em { font-style: italic; color: var(--gold); }
+.hero-title { font-family: var(--mono); font-size: 13px; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 32px; text-transform: uppercase; }
+.hero-desc { font-size: 16px; color: var(--muted); max-width: 480px; line-height: 1.8; margin-bottom: 48px; }
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn-primary { background: var(--gold); color: var(--bg); font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 32px; text-decoration: none; transition: all 0.25s; font-weight: 500; }
+.btn-primary:hover { background: var(--gold-light); }
+.btn-ghost { border: 1px solid var(--border-bright); color: var(--gold); font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 32px; text-decoration: none; transition: all 0.25s; }
+.btn-ghost:hover { background: rgba(201,169,110,0.08); }
+
+/* HERO PANEL */
+.hero-panel { background: var(--surface); border: 1px solid var(--border); padding: 40px; position: relative; }
+.hero-panel::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--gold), transparent); }
+.panel-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 28px; }
+.stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.stat-value { font-family: var(--serif); font-size: 36px; font-weight: 300; color: var(--text); line-height: 1; margin-bottom: 4px; }
+.stat-value.green { color: var(--green); }
+.stat-value.gold { color: var(--gold); }
+.stat-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; }
+.stat-divider { grid-column: 1 / -1; height: 1px; background: var(--border); }
+.live-indicator { display: flex; align-items: center; gap: 8px; margin-top: 28px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; }
+.live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
+
+/* SECTIONS */
+section { padding: 100px 48px; position: relative; z-index: 1; }
+.section-inner { max-width: 1280px; margin: 0 auto; }
+.section-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+.section-label::after { content: ''; display: block; flex: 1; max-width: 60px; height: 1px; background: var(--gold-dim); }
+.section-title { font-family: var(--serif); font-size: clamp(36px, 4vw, 56px); font-weight: 300; line-height: 1.1; color: var(--text); margin-bottom: 20px; }
+.section-title em { font-style: italic; color: var(--gold); }
+.section-sub { font-size: 16px; color: var(--muted); max-width: 580px; line-height: 1.8; }
+
+/* ABOUT */
+.about-bg { background: var(--bg2); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-top: 64px; }
+.blockquote { font-family: var(--serif); font-size: clamp(22px, 2.5vw, 30px); font-weight: 300; font-style: italic; color: var(--text); line-height: 1.5; margin-bottom: 32px; position: relative; padding-left: 32px; }
+.blockquote::before { content: '"'; position: absolute; left: 0; top: -10px; font-size: 72px; color: var(--gold); opacity: 0.3; line-height: 1; font-style: normal; }
+.bio-text { font-size: 15px; color: var(--muted); line-height: 1.9; margin-bottom: 20px; }
+.principles { display: grid; gap: 2px; }
+.principle { background: var(--surface); border: 1px solid var(--border); padding: 24px 28px; display: flex; gap: 20px; align-items: flex-start; transition: border-color 0.25s; }
+.principle:hover { border-color: var(--border-bright); }
+.principle-num { font-family: var(--mono); font-size: 11px; color: var(--gold-dim); padding-top: 3px; flex-shrink: 0; }
+.principle-title { font-family: var(--serif); font-size: 18px; font-weight: 500; color: var(--text); margin-bottom: 6px; }
+.principle-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+/* PERFORMANCE */
+.performance-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin: 48px 0; }
+.perf-card { background: var(--surface); border: 1px solid var(--border); padding: 32px 28px; position: relative; overflow: hidden; transition: border-color 0.25s; }
+.perf-card:hover { border-color: var(--border-bright); }
+.perf-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
+.perf-card:hover::after { transform: scaleX(1); }
+.perf-metric { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+.perf-value { font-family: var(--serif); font-size: 44px; font-weight: 300; line-height: 1; margin-bottom: 8px; }
+.perf-value.pos { color: var(--green); }
+.perf-value.gold { color: var(--gold); }
+.perf-value.neu { color: var(--text); }
+.perf-context { font-size: 12px; color: var(--muted); }
+.perf-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.2); color: var(--green); font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; padding: 4px 10px; margin-top: 10px; }
+
+/* EQUITY CHART */
+.equity-panel { background: var(--surface); border: 1px solid var(--border); padding: 36px; margin-top: 2px; }
+.equity-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+.equity-title { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.equity-value { font-family: var(--serif); font-size: 28px; color: var(--green); }
+.bars { display: flex; align-items: flex-end; gap: 4px; height: 120px; }
+.bar { flex: 1; border-radius: 2px 2px 0 0; transition: opacity 0.2s; min-height: 4px; }
+.bar:hover { opacity: 0.7; }
+.bar.pos { background: linear-gradient(180deg, rgba(74,222,128,0.8), rgba(74,222,128,0.3)); }
+.bar.neg { background: linear-gradient(180deg, rgba(248,113,113,0.8), rgba(248,113,113,0.3)); }
+.bar-labels { display: flex; justify-content: space-between; margin-top: 8px; }
+.bar-label { font-family: var(--mono); font-size: 9px; color: var(--muted); letter-spacing: 0.05em; }
+.audit-note { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; color: var(--gold-dim); margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border); }
+
+/* MARKETS */
+.markets-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 48px; }
+.market-card { background: var(--surface); border: 1px solid var(--border); padding: 36px 32px; transition: all 0.25s; }
+.market-card:hover { border-color: var(--border-bright); transform: translateY(-2px); }
+.market-icon { font-size: 28px; margin-bottom: 16px; display: block; }
+.market-name { font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--text); margin-bottom: 8px; }
+.market-instruments { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; color: var(--gold); margin-bottom: 14px; text-transform: uppercase; }
+.market-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
+.market-tag { display: inline-block; background: rgba(201,169,110,0.08); border: 1px solid var(--border); font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-dim); padding: 3px 8px; margin-top: 16px; margin-right: 4px; }
+
+/* CREDENTIALS */
+.certs-notice { background: rgba(201,169,110,0.06); border: 1px solid var(--border); border-left: 3px solid var(--gold); padding: 20px 24px; margin-bottom: 48px; font-size: 14px; color: var(--muted); }
+.certs-notice strong { color: var(--gold); }
+.cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 48px; }
+.cert-card { background: var(--surface); border: 1px solid var(--border); padding: 32px; position: relative; transition: all 0.25s; }
+.cert-card:hover { border-color: var(--border-bright); }
+.cert-card.placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 200px; border-style: dashed; }
+.cert-logo { font-family: var(--serif); font-size: 24px; font-weight: 600; color: var(--gold); margin-bottom: 8px; letter-spacing: 0.05em; }
+.cert-type { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; }
+.cert-amount { font-family: var(--serif); font-size: 32px; color: var(--green); font-weight: 300; margin-bottom: 4px; }
+.cert-date { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 0.08em; }
+.cert-status { position: absolute; top: 16px; right: 16px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.2); padding: 4px 10px; }
+.upload-icon { font-size: 32px; color: var(--muted); margin-bottom: 12px; }
+.upload-text { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-align: center; }
+
+/* TESTIMONIALS */
+.testimonials-bg { background: var(--bg2); }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 48px; }
+.testimonial-card { background: var(--surface); border: 1px solid var(--border); padding: 36px; position: relative; transition: border-color 0.25s; }
+.testimonial-card:hover { border-color: var(--border-bright); }
+.testimonial-quote { font-family: var(--serif); font-size: 17px; font-style: italic; font-weight: 300; color: var(--text); line-height: 1.6; margin-bottom: 24px; position: relative; padding-top: 16px; }
+.testimonial-quote::before { content: '"'; position: absolute; top: -8px; left: 0; font-size: 48px; color: var(--gold); opacity: 0.3; line-height: 1; font-style: normal; }
+.testimonial-author { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 2px; }
+.testimonial-role { font-family: var(--mono); font-size: 10px; color: var(--muted); }
+
+/* FAQ */
+.faq-bg { background: var(--bg); }
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 48px; }
+.faq-item { background: var(--surface); border: 1px solid var(--border); padding: 28px 32px; transition: border-color 0.25s; cursor: pointer; }
+.faq-item:hover { border-color: var(--border-bright); }
+.faq-q { font-family: var(--serif); font-size: 18px; font-weight: 500; color: var(--text); margin-bottom: 12px; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.faq-icon { color: var(--gold); font-style: normal; flex-shrink: 0; font-size: 20px; font-family: var(--mono); }
+.faq-a { font-size: 14px; color: var(--muted); line-height: 1.8; display: none; padding-top: 4px; }
+.faq-item.open .faq-a { display: block; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-icon { transition: transform 0.2s; }
+
+/* JOURNEY */
+.journey-bg { background: var(--bg2); }
+.timeline { position: relative; margin-top: 64px; padding-left: 48px; }
+.timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 1px; background: linear-gradient(180deg, var(--gold), transparent); }
+.timeline-item { position: relative; margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--border); }
+.timeline-item:last-child { border-bottom: none; }
+.timeline-dot { position: absolute; left: -53px; top: 4px; width: 10px; height: 10px; background: var(--bg2); border: 2px solid var(--gold); border-radius: 50%; }
+.timeline-dot.active { background: var(--gold); box-shadow: 0 0 0 4px rgba(201,169,110,0.15); }
+.timeline-period { font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.timeline-title { font-family: var(--serif); font-size: 24px; font-weight: 500; color: var(--text); margin-bottom: 12px; }
+.timeline-desc { font-size: 14px; color: var(--muted); line-height: 1.8; max-width: 720px; }
+.timeline-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 16px; }
+.timeline-tag { font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--border); padding: 4px 10px; }
+
+/* RISK STATS ROW */
+.risk-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 48px; }
+.risk-item { background: var(--surface); border: 1px solid var(--border); border-top: 2px solid var(--gold-dim); padding: 24px; text-align: center; }
+.risk-val { font-family: var(--serif); font-size: 32px; font-weight: 300; color: var(--text); margin-bottom: 6px; }
+.risk-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+/* CONTACT */
+.contact-bg { background: var(--bg); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-top: 64px; }
+.contact-info { display: grid; gap: 32px; }
+.contact-item { display: flex; gap: 20px; align-items: flex-start; }
+.contact-icon { width: 40px; height: 40px; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+.contact-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.contact-value { font-size: 15px; color: var(--text); }
+.contact-value a { color: var(--gold); text-decoration: none; }
+.contact-form { display: grid; gap: 16px; }
+.form-group { display: grid; gap: 6px; }
+.form-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.form-input, .form-textarea, .form-select { background: var(--surface); border: 1px solid var(--border); color: var(--text); font-family: var(--sans); font-size: 14px; padding: 14px 16px; outline: none; width: 100%; transition: border-color 0.2s; resize: none; -webkit-appearance: none; }
+.form-input:focus, .form-textarea:focus { border-color: var(--border-bright); }
+.form-input::placeholder, .form-textarea::placeholder { color: var(--muted); opacity: 0.5; }
+.form-submit { background: var(--gold); color: var(--bg); border: none; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; padding: 16px 32px; cursor: pointer; transition: all 0.25s; font-weight: 500; justify-self: start; }
+.form-submit:hover { background: var(--gold-light); }
+
+/* FOOTER */
+footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 40px 48px; }
+.footer-inner { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.footer-logo { font-family: var(--serif); font-size: 18px; color: var(--gold); font-weight: 300; }
+.footer-copy { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; color: var(--muted); text-align: right; line-height: 1.8; }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+.fade-up { opacity: 0; animation: fadeUp 0.7s ease forwards; }
+.delay-1 { animation-delay: 0.1s; } .delay-2 { animation-delay: 0.2s; } .delay-3 { animation-delay: 0.35s; } .delay-4 { animation-delay: 0.5s; }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+  section { padding: 80px 24px; }
+  .hero { padding: 140px 24px 80px; }
+  .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .performance-grid, .risk-row { grid-template-columns: 1fr 1fr; }
+  .markets-grid, .testimonials-grid, .cert-grid, .faq-grid { grid-template-columns: 1fr; }
+  footer { padding: 32px 24px; }
+  .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
+  .footer-copy { text-align: center; }
+}
+@media (max-width: 640px) {
+  .performance-grid, .risk-row { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 44px; }
+  .stat-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker-bar" aria-hidden="true">
+  <div class="ticker-inner">
+    <div class="ticker-item"><strong>EURUSD</strong> 1.0847 <span class="up">▲ 0.23%</span></div>
+    <div class="ticker-item"><strong>XAUUSD</strong> 2,341.50 <span class="up">▲ 0.87%</span></div>
+    <div class="ticker-item"><strong>GBPUSD</strong> 1.2634 <span class="down">▼ 0.11%</span></div>
+    <div class="ticker-item"><strong>USDJPY</strong> 152.40 <span class="up">▲ 0.34%</span></div>
+    <div class="ticker-item"><strong>USOIL</strong> 78.40 <span class="down">▼ 0.52%</span></div>
+    <div class="ticker-item"><strong>NAS100</strong> 17,842 <span class="up">▲ 0.44%</span></div>
+    <div class="ticker-item"><strong>AUDUSD</strong> 0.6412 <span class="down">▼ 0.18%</span></div>
+    <div class="ticker-item"><strong>XAGUSD</strong> 27.84 <span class="up">▲ 1.12%</span></div>
+    <div class="ticker-item"><strong>USDCAD</strong> 1.3820 <span class="up">▲ 0.07%</span></div>
+    <div class="ticker-item"><strong>EURGBP</strong> 0.8584 <span class="down">▼ 0.09%</span></div>
+    <!-- duplicate for loop -->
+    <div class="ticker-item"><strong>EURUSD</strong> 1.0847 <span class="up">▲ 0.23%</span></div>
+    <div class="ticker-item"><strong>XAUUSD</strong> 2,341.50 <span class="up">▲ 0.87%</span></div>
+    <div class="ticker-item"><strong>GBPUSD</strong> 1.2634 <span class="down">▼ 0.11%</span></div>
+    <div class="ticker-item"><strong>USDJPY</strong> 152.40 <span class="up">▲ 0.34%</span></div>
+    <div class="ticker-item"><strong>USOIL</strong> 78.40 <span class="down">▼ 0.52%</span></div>
+    <div class="ticker-item"><strong>NAS100</strong> 17,842 <span class="up">▲ 0.44%</span></div>
+    <div class="ticker-item"><strong>AUDUSD</strong> 0.6412 <span class="down">▼ 0.18%</span></div>
+    <div class="ticker-item"><strong>XAGUSD</strong> 27.84 <span class="up">▲ 1.12%</span></div>
+    <div class="ticker-item"><strong>USDCAD</strong> 1.3820 <span class="up">▲ 0.07%</span></div>
+    <div class="ticker-item"><strong>EURGBP</strong> 0.8584 <span class="down">▼ 0.09%</span></div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav role="navigation" aria-label="Main navigation">
+  <a href="#home" class="nav-logo">Brian <span>Nzomo</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#performance">Performance</a></li>
+    <li><a href="#markets">Markets</a></li>
+    <li><a href="#credentials">Credentials</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Partner Enquiry</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow fade-up">Independent Professional Trader · Nairobi, Kenya</div>
+      <h1 class="fade-up delay-1">Brian<br><em>Nzomo</em></h1>
+      <div class="hero-title fade-up delay-2">Multi-Asset · Macro-Driven · Systematic Edge</div>
+      <p class="hero-desc fade-up delay-2">
+        A disciplined, data-driven trader with verified performance across multiple regulated 
+        prop trading firms. Specialising in global Forex, Commodities, and Futures markets 
+        with a consistent risk-managed approach built for long-term capital growth.
+      </p>
+      <div class="hero-actions fade-up delay-3">
+        <a href="#performance" class="btn-primary">View Track Record</a>
+        <a href="#contact" class="btn-ghost">Partnership Enquiry</a>
+      </div>
+    </div>
+
+    <div class="hero-panel fade-up delay-2">
+      <div class="panel-label">Live Performance Overview · Update With Your Data</div>
+      <div class="stat-grid">
+        <div>
+          <div class="stat-value green">+24.3<small>%</small></div>
+          <div class="stat-label">Net Return YTD</div>
+        </div>
+        <div>
+          <div class="stat-value gold">68<small>%</small></div>
+          <div class="stat-label">Win Rate</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div>
+          <div class="stat-value">1:2.4</div>
+          <div class="stat-label">Risk / Reward Ratio</div>
+        </div>
+        <div>
+          <div class="stat-value">4.8<small>%</small></div>
+          <div class="stat-label">Max Drawdown</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div>
+          <div class="stat-value gold">6</div>
+          <div class="stat-label">Active Funded Accounts</div>
+        </div>
+        <div>
+          <div class="stat-value green">$347K</div>
+          <div class="stat-label">Total Capital Managed</div>
+        </div>
+      </div>
+      <div class="live-indicator">
+        <div class="live-dot"></div>
+        Active across CME Futures &amp; CFD Prop Firms
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-bg" id="about">
+  <div class="section-inner">
+    <div class="section-label">01 — About</div>
+    <h2 class="section-title">Disciplined. <em>Consistent.</em> Accountable.</h2>
+
+    <div class="about-grid">
+      <div>
+        <div class="blockquote">
+          Markets punish urgency and reward patience. I trade what the data says, not what I feel.
+        </div>
+        <p class="bio-text">
+          I am a Kenya-based independent professional trader with a documented track record across regulated prop trading firms including FTMO and Topstep. My approach integrates macroeconomic fundamental analysis with multi-timeframe technical execution and institutional order flow confirmation.
+        </p>
+        <p class="bio-text">
+          My trading operation covers 25+ instruments across Forex, Precious Metals, Energy, and Equity Indices — monitored continuously with proprietary analysis processes developed over years of refinement. Every trade enters only on a minimum of four independent confirming conditions, never on a single signal or gut feeling.
+        </p>
+        <p class="bio-text">
+          I am currently in a deliberate scaling phase — growing capital under management across multiple prop firm platforms while building the verifiable track record required for institutional partnership conversations.
+        </p>
+      </div>
+
+      <div class="principles">
+        <div class="principle">
+          <div class="principle-num">01</div>
+          <div>
+            <div class="principle-title">Macro Foundation</div>
+            <div class="principle-desc">Directional bias established from fundamental economic analysis, central bank policy, and geopolitical data before any chart is consulted.</div>
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle-num">02</div>
+          <div>
+            <div class="principle-title">Institutional Confirmation</div>
+            <div class="principle-desc">Futures market order flow and options positioning used to verify that institutional money is aligned with the directional thesis before entry.</div>
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle-num">03</div>
+          <div>
+            <div class="principle-title">Precision Entry</div>
+            <div class="principle-desc">Technical structure, key price levels, and multi-timeframe analysis provide exact entry timing. Direction is never determined from technicals alone.</div>
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle-num">04</div>
+          <div>
+            <div class="principle-title">Strict Risk Control</div>
+            <div class="principle-desc">Maximum 1% risk per trade. Daily loss limits are absolute. Position sizing scales with conviction, never with hope. Capital protection is the primary objective.</div>
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle-num">05</div>
+          <div>
+            <div class="principle-title">Documented Performance</div>
+            <div class="principle-desc">Every trade is logged, tagged, and analysed. TradeZella analytics provide objective insight into strategy performance, removing emotional narrative from the process.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERFORMANCE -->
+<section id="performance">
+  <div class="section-inner">
+    <div class="section-label">02 — Performance</div>
+    <h2 class="section-title">A <em>Verifiable</em> Track Record</h2>
+    <p class="section-sub">All metrics reflect live trading across funded accounts. Simulation results are excluded. Full trade statements available under NDA for qualified investors.</p>
+
+    <div class="performance-grid">
+      <div class="perf-card">
+        <div class="perf-metric">Net Return — YTD</div>
+        <div class="perf-value pos">+24.3%</div>
+        <div class="perf-context">Across all funded accounts</div>
+        <div class="perf-badge">✓ Verified Live</div>
+      </div>
+      <div class="perf-card">
+        <div class="perf-metric">Win Rate</div>
+        <div class="perf-value gold">68%</div>
+        <div class="perf-context">327 closed trades YTD</div>
+        <div class="perf-badge">✓ Verified Live</div>
+      </div>
+      <div class="perf-card">
+        <div class="perf-metric">Profit Factor</div>
+        <div class="perf-value neu">2.41</div>
+        <div class="perf-context">Gross profit ÷ gross loss</div>
+        <div class="perf-badge">✓ Verified Live</div>
+      </div>
+      <div class="perf-card">
+        <div class="perf-metric">Max Drawdown</div>
+        <div class="perf-value" style="color:#F87171">4.8%</div>
+        <div class="perf-context">Peak-to-trough, all accounts</div>
+        <div class="perf-badge" style="color:#F87171;background:rgba(248,113,113,0.1);border-color:rgba(248,113,113,0.2)">Risk Controlled</div>
+      </div>
+    </div>
+
+    <!-- Monthly P&L Chart -->
+    <div class="equity-panel">
+      <div class="equity-header">
+        <div class="equity-title">Monthly P&amp;L — 2025 (Illustrative · Update With Real Data)</div>
+        <div class="equity-value">+24.3% YTD</div>
+      </div>
+      <div class="bars">
+        <div class="bar pos" style="height:45%" title="Jan: +3.2%"></div>
+        <div class="bar pos" style="height:62%" title="Feb: +4.8%"></div>
+        <div class="bar neg" style="height:20%" title="Mar: -1.4%"></div>
+        <div class="bar pos" style="height:75%" title="Apr: +5.6%"></div>
+        <div class="bar pos" style="height:38%" title="May: +2.7%"></div>
+        <div class="bar neg" style="height:25%" title="Jun: -1.8%"></div>
+        <div class="bar pos" style="height:55%" title="Jul: +4.1%"></div>
+        <div class="bar pos" style="height:48%" title="Aug: +3.6%"></div>
+        <div class="bar pos" style="height:30%" title="Sep: +2.1%"></div>
+        <div class="bar pos" style="height:68%" title="Oct: +5.1%"></div>
+        <div class="bar neg" style="height:15%" title="Nov: -1.0%"></div>
+        <div class="bar pos" style="height:52%" title="Dec: +3.8%"></div>
+      </div>
+      <div class="bar-labels">
+        <span class="bar-label">Jan</span><span class="bar-label">Feb</span><span class="bar-label">Mar</span><span class="bar-label">Apr</span><span class="bar-label">May</span><span class="bar-label">Jun</span><span class="bar-label">Jul</span><span class="bar-label">Aug</span><span class="bar-label">Sep</span><span class="bar-label">Oct</span><span class="bar-label">Nov</span><span class="bar-label">Dec</span>
+      </div>
+      <div class="audit-note">
+        Full trade-by-trade statements available upon request under NDA · TradeZella analytics report · Prop firm dashboard exports
+      </div>
+    </div>
+
+    <!-- Risk metrics -->
+    <div class="risk-row">
+      <div class="risk-item">
+        <div class="risk-val">1%</div>
+        <div class="risk-label">Max Risk Per Trade</div>
+      </div>
+      <div class="risk-item">
+        <div class="risk-val">3%</div>
+        <div class="risk-label">Daily Loss Limit</div>
+      </div>
+      <div class="risk-item">
+        <div class="risk-val">2.4×</div>
+        <div class="risk-label">Average RR Ratio</div>
+      </div>
+      <div class="risk-item">
+        <div class="risk-val">94</div>
+        <div class="risk-label">TradeZella Score</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETS -->
+<section id="markets">
+  <div class="section-inner">
+    <div class="section-label">03 — Markets</div>
+    <h2 class="section-title">Instruments <em>Traded</em></h2>
+    <p class="section-sub">Multi-asset coverage across the world's most liquid markets, with each position informed by the underlying fundamental drivers of that specific instrument and asset class.</p>
+
+    <div class="markets-grid">
+      <div class="market-card">
+        <span class="market-icon">🌐</span>
+        <div class="market-name">Major Forex Pairs</div>
+        <div class="market-instruments">EURUSD · GBPUSD · USDJPY · USDCHF · AUDUSD · NZDUSD · USDCAD</div>
+        <div class="market-desc">The core currency pairs, traded with a macro-fundamental bias derived from central bank policy, economic data, and geopolitical analysis. Entry timing uses multi-timeframe technical structure.</div>
+        <span class="market-tag">Day Trading</span><span class="market-tag">Swing</span>
+      </div>
+      <div class="market-card">
+        <span class="market-icon">⚡</span>
+        <div class="market-name">Minor Currency Pairs</div>
+        <div class="market-instruments">EURGBP · EURJPY · GBPJPY · AUDJPY · AUDCAD · AUDNZD</div>
+        <div class="market-desc">Cross-currency trades capitalising on relative strength differences between individual currencies. Safe-haven dynamics in JPY crosses and commodity correlations in AUD crosses are primary drivers.</div>
+        <span class="market-tag">Carry Trade</span><span class="market-tag">Relative Value</span>
+      </div>
+      <div class="market-card">
+        <span class="market-icon">🥇</span>
+        <div class="market-name">Precious Metals</div>
+        <div class="market-instruments">Gold (XAUUSD) · Silver (XAGUSD)</div>
+        <div class="market-desc">Safe-haven flows, real interest rate differentials, and central bank demand inform Gold positioning. Silver adds industrial demand dynamics and acts as a risk-regime barometer alongside Gold.</div>
+        <span class="market-tag">Safe Haven</span><span class="market-tag">Inflation Hedge</span>
+      </div>
+      <div class="market-card">
+        <span class="market-icon">🛢️</span>
+        <div class="market-name">Energy Markets</div>
+        <div class="market-instruments">WTI Crude (USOIL) · Brent Crude</div>
+        <div class="market-desc">OPEC+ production policy, geopolitical supply risks, and weekly inventory data drive energy positioning. Oil trades also inform currency positions in commodity-linked currencies such as CAD and NOK.</div>
+        <span class="market-tag">Supply-Driven</span><span class="market-tag">Geopolitical</span>
+      </div>
+      <div class="market-card">
+        <span class="market-icon">📈</span>
+        <div class="market-name">Equity Indices</div>
+        <div class="market-instruments">S&amp;P 500 · NASDAQ 100 · Dow Jones 30</div>
+        <div class="market-desc">Index trading provides direct exposure to global risk sentiment. Options market gamma exposure (GEX) on indices also informs the volatility regime applicable to all other asset classes.</div>
+        <span class="market-tag">Risk Regime</span><span class="market-tag">Macro Proxy</span>
+      </div>
+      <div class="market-card">
+        <span class="market-icon">🌏</span>
+        <div class="market-name">Synthetic Indices</div>
+        <div class="market-instruments">Boom &amp; Crash Series (Deriv)</div>
+        <div class="market-desc">Proprietary algorithmic strategies on Deriv synthetic indices with 24/7 market access. Independent of macroeconomic events, these are traded using a dedicated systematic approach with full automation capability.</div>
+        <span class="market-tag">Algorithmic</span><span class="market-tag">24/7</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section class="certs-bg" id="credentials" style="background:var(--bg2)">
+  <div class="section-inner">
+    <div class="section-label">04 — Credentials</div>
+    <h2 class="section-title">Prop Firm <em>Funded Accounts</em></h2>
+    <p class="section-sub">Verified funding from regulated proprietary trading firms. Payout certificates, live account statements, and performance exports available for qualified investors under NDA.</p>
+
+    <div class="certs-notice">
+      <strong>Due Diligence:</strong> Complete documentation packages including individual trade history, monthly statements, payout certificates, and TradeZella analytics are provided upon signing a mutual NDA. Contact to begin the process.
+    </div>
+
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-status">Active · Funded</div>
+        <div class="cert-logo">FTMO</div>
+        <div class="cert-type">CFD Forex · Funded Account</div>
+        <div class="cert-amount">$100,000</div>
+        <div class="cert-date">Funded 2025 · Payouts active</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-status">Active · Funded</div>
+        <div class="cert-logo">Topstep</div>
+        <div class="cert-type">CME Futures · Trading Combine Passed</div>
+        <div class="cert-amount">$150,000</div>
+        <div class="cert-date">Funded 2025 · Payouts active</div>
+      </div>
+      <div class="cert-card placeholder">
+        <div class="upload-icon">+</div>
+        <div class="upload-text">Payout Certificate<br>Add when received</div>
+      </div>
+      <div class="cert-card placeholder">
+        <div class="upload-icon">+</div>
+        <div class="upload-text">Payout Certificate<br>Add when received</div>
+      </div>
+      <div class="cert-card placeholder">
+        <div class="upload-icon">+</div>
+        <div class="upload-text">Payout Certificate<br>Add when received</div>
+      </div>
+      <div class="cert-card placeholder">
+        <div class="upload-icon">+</div>
+        <div class="upload-text">Payout Certificate<br>Add when received</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-bg" id="testimonials">
+  <div class="section-inner">
+    <div class="section-label">05 — Testimonials</div>
+    <h2 class="section-title">What <em>Others Say</em></h2>
+    <p class="section-sub">Feedback from fellow traders and collaborators. References are available upon request for serious investor enquiries.</p>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-quote">The consistency and discipline in Brian's approach is what stands out. He doesn't chase trades. He waits for the market to come to him.</div>
+        <div class="testimonial-author">Trading Colleague</div>
+        <div class="testimonial-role">Fellow Funded Trader · FTMO</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-quote">His macro analysis is thorough. Every position has a clear thesis backed by data before entry. That is rare in retail trading circles.</div>
+        <div class="testimonial-author">Trading Community Member</div>
+        <div class="testimonial-role">East Africa Trader Network</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-quote">The risk management is impeccable. In the time I have known him, he has never blown an account on emotion. That discipline is bankable.</div>
+        <div class="testimonial-author">Accountability Partner</div>
+        <div class="testimonial-role">Independent Trader · Nairobi</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section class="journey-bg" id="journey">
+  <div class="section-inner">
+    <div class="section-label">06 — Journey</div>
+    <h2 class="section-title">The <em>Path</em> to Professional Capital</h2>
+    <p class="section-sub">A transparent account of the progression from student of markets to funded professional trader. Credibility is built on the story, not just the results.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Foundations · Market Education</div>
+        <div class="timeline-title">Learning to Read the Markets</div>
+        <div class="timeline-desc">Began with technical analysis fundamentals — price action, market structure, support and resistance. First live trading account funded with personal capital. Valuable, expensive education in discipline, risk management, and the psychology of losing money. Developed respect for the markets through hard experience, not theory.</div>
+        <div class="timeline-tags"><span class="timeline-tag">Technical Analysis</span><span class="timeline-tag">Risk Management</span><span class="timeline-tag">Market Structure</span></div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Strategy Development · Systematic Approach</div>
+        <div class="timeline-title">Building a Repeatable Process</div>
+        <div class="timeline-desc">Transition from discretionary gut-feeling trades to a systematic, rules-based approach. Developed proprietary strategies for Deriv synthetic indices. First algorithmic trading experience. Began journaling every trade and reviewing patterns with quantitative data rather than memory. Profitability became consistent when the process became consistent.</div>
+        <div class="timeline-tags"><span class="timeline-tag">Algorithmic Strategy</span><span class="timeline-tag">Trade Journaling</span><span class="timeline-tag">Synthetic Indices</span></div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Institutional Methods · Advanced Study</div>
+        <div class="timeline-title">Integrating Macro and Institutional Analysis</div>
+        <div class="timeline-desc">Deep study of how institutional money actually moves markets. Macroeconomic analysis, central bank policy cycles, geopolitical risk pricing, and futures market positioning added a fundamental layer to the technical approach. Built proprietary daily analysis processes that synthesise multiple data streams into structured trading bias before any chart is opened. Edge sharpened significantly.</div>
+        <div class="timeline-tags"><span class="timeline-tag">Macro Analysis</span><span class="timeline-tag">Futures Markets</span><span class="timeline-tag">Options Positioning</span><span class="timeline-tag">Central Bank Policy</span></div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot active"></div>
+        <div class="timeline-period">Current · Professional Operation · Active</div>
+        <div class="timeline-title">Funded Trader — Scaling Capital</div>
+        <div class="timeline-desc">Operating multiple funded accounts simultaneously across leading prop trading firms — FTMO (CFD Forex) and Topstep (CME Futures). Building a verifiable, auditable track record for institutional partnership conversations. Currently in deliberate scaling phase: adding accounts as each proves consistent, with the long-term objective of managing significant external capital for qualified investors. Open to strategic partnership discussions.</div>
+        <div class="timeline-tags"><span class="timeline-tag">FTMO Funded</span><span class="timeline-tag">Topstep Funded</span><span class="timeline-tag">Multi-Firm</span><span class="timeline-tag">Scaling</span><span class="timeline-tag">Open to Partnership</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-bg" id="faq">
+  <div class="section-inner">
+    <div class="section-label">07 — FAQ</div>
+    <h2 class="section-title">Investor <em>Questions</em></h2>
+    <p class="section-sub">Answers to the questions serious investors ask first. If yours is not here, contact directly.</p>
+
+    <div class="faq-grid">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Are your results audited or verified? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Performance data is pulled directly from prop firm platform dashboards (FTMO, Topstep) and TradeZella analytics which auto-syncs from broker accounts. These are not self-reported spreadsheets. Full trade-by-trade exports, monthly statements, and payout certificates are provided under NDA for due diligence purposes. Third-party audit via an independent CPA is available at investor request for any partnership above a certain threshold.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">What is your approach to drawdown and risk? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Capital protection is the primary objective. Maximum risk per trade is 1% of account. A hard daily loss limit of 3% triggers a complete stop for the day regardless of conviction. The maximum historical drawdown across all accounts is 4.8% — significantly below the industry norm. I trade with the same risk discipline on prop firm accounts as I would on personal capital.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Can you describe your strategy without giving away your edge? <span class="faq-icon">+</span></div>
+        <div class="faq-a">The approach is macro-driven and systematic. Directional bias is established from fundamental economic and geopolitical analysis before any chart is opened. Multiple independent confirmation conditions must align before a position is entered. Both long-term trend following and shorter-term countertrend opportunities are taken depending on market structure. The complete methodology documentation is included in the due diligence package under NDA.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">What markets and instruments do you trade? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Primary focus is major and minor Forex pairs, Gold, Silver, WTI and Brent crude oil, and equity index futures (S&P 500, NASDAQ, Dow). Each instrument is traded with its specific fundamental drivers in mind — macroeconomic data for currencies, supply dynamics for commodities, risk regime for indices. Correlated instruments are never counted as separate positions for risk purposes.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Are you open to managing external capital? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes, this is the objective. I am currently building the verifiable track record required for institutional conversations. For strategic investors, family offices, or qualified individuals interested in managed account arrangements, I welcome a conversation. All enquiries are handled with full confidentiality under mutual NDA. Contact to discuss structure, terms, and minimum commitment.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Why Kenya — does location affect execution? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Location does not affect trading execution. All trading is conducted digitally through regulated prop firm platforms with execution handled by their global infrastructure. Analysis and trade management operate 24 hours during market hours. East Africa Time (EAT, UTC+3) provides excellent coverage of both the London and New York sessions — the two most liquid periods in global markets — without the late-night hours that affect traders in Asia-Pacific.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-bg" id="contact">
+  <div class="section-inner">
+    <div class="section-label">08 — Contact</div>
+    <h2 class="section-title">Partnership <em>Enquiries</em></h2>
+    <p class="section-sub">Open to discussions with investors, family offices, and strategic partners. All enquiries handled with full confidentiality. Response within 24 hours guaranteed.</p>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-value">Nairobi, Kenya · East Africa (EAT · UTC+3)</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <div class="contact-label">Professional Email</div>
+            <div class="contact-value"><a href="mailto:nzomobrian001@gmail.com">nzomobrian001@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💬</div>
+          <div>
+            <div class="contact-label">Telegram</div>
+            <div class="contact-value"><a href="https://t.me/TushJunior" target="_blank">@TushJunior</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">⏱</div>
+          <div>
+            <div class="contact-label">Response Time</div>
+            <div class="contact-value">Within 24 hours · All days</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📋</div>
+          <div>
+            <div class="contact-label">Due Diligence Package Includes</div>
+            <div class="contact-value" style="font-size:13px;color:var(--muted);line-height:1.8">
+              Trade-by-trade statement exports<br>
+              Monthly account summaries<br>
+              Payout certificates<br>
+              TradeZella analytics report<br>
+              Risk management documentation
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <div class="form-group">
+          <div class="form-label">Full Name</div>
+          <input class="form-input" type="text" placeholder="Your full name" id="cf-name">
+        </div>
+        <div class="form-group">
+          <div class="form-label">Email Address</div>
+          <input class="form-input" type="email" placeholder="your@email.com" id="cf-email">
+        </div>
+        <div class="form-group">
+          <div class="form-label">Organisation</div>
+          <input class="form-input" type="text" placeholder="Fund, family office, or firm" id="cf-org">
+        </div>
+        <div class="form-group">
+          <div class="form-label">Enquiry Type</div>
+          <select class="form-input form-select" id="cf-type">
+            <option value="">Select enquiry type</option>
+            <option>Managed Account Discussion</option>
+            <option>Strategic Investment Partnership</option>
+            <option>Due Diligence Package Request</option>
+            <option>Performance Data Request</option>
+            <option>General Enquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <div class="form-label">Message</div>
+          <textarea class="form-textarea" rows="4" placeholder="Please describe your mandate, capital range, or specific questions..." id="cf-msg"></textarea>
+        </div>
+        <button class="form-submit" onclick="handleSubmit()">Send Enquiry →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<div style="background:var(--bg2);border-top:1px solid var(--border);padding:24px 48px;">
+  <div style="max-width:1280px;margin:0 auto;font-family:var(--mono);font-size:10px;letter-spacing:0.05em;color:var(--muted);opacity:0.6;line-height:1.7;">
+    <strong style="opacity:1">Risk Disclosure:</strong> Trading foreign exchange, futures, CFDs, and financial derivatives involves substantial risk and is not appropriate for all investors. Past performance is not indicative of future results. Performance data presented reflects results on proprietary trading firm accounts and may not represent results achievable with external investor capital. This website does not constitute investment advice or a solicitation to invest. All figures should be independently verified prior to any investment decision.
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Brian Nzomo · Professional Trader</div>
+    <div class="footer-copy">
+      Nairobi, Kenya · East Africa Time (EAT · UTC+3)<br>
+      nzomobrian001@gmail.com · @TushJunior · briannzomo.com
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll effect
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+  nav.style.background = window.scrollY > 50 ? 'rgba(8,12,20,0.97)' : 'rgba(8,12,20,0.88)';
+});
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// FAQ toggle
+function toggleFaq(el) {
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) el.classList.add('open');
+}
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.principle,.perf-card,.market-card,.cert-card,.timeline-item,.faq-item,.testimonial-card,.risk-item').forEach(el => {
+  el.style.opacity='0'; el.style.transform='translateY(20px)'; el.style.transition='opacity 0.6s ease, transform 0.6s ease'; observer.observe(el);
+});
+
+// Contact form
+function handleSubmit() {
+  const name = document.getElementById('cf-name').value;
+  const email = document.getElementById('cf-email').value;
+  if (!name || !email) { alert('Please provide your name and email address.'); return; }
+  const subject = encodeURIComponent('Partnership Enquiry — ' + document.getElementById('cf-type').value);
+  const body = encodeURIComponent(
+    'Name: ' + name + '\nOrg: ' + document.getElementById('cf-org').value +
+    '\nType: ' + document.getElementById('cf-type').value +
+    '\n\n' + document.getElementById('cf-msg').value
+  );
+  window.location.href = 'mailto:nzomobrian001@gmail.com?subject=' + subject + '&body=' + body;
+}
+</script>
+</body>
+</html>
